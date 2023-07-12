@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/w3c_fashion/static/css/main.7e67ffb8.css",
-    "main.js": "/w3c_fashion/static/js/main.7fff6da3.js",
+    "main.js": "/w3c_fashion/static/js/main.f041cb66.js",
     "static/media/jane.jpg": "/w3c_fashion/static/media/jane.8f229fa871be9b9fc5a6.jpg",
     "static/media/jeans.jpg": "/w3c_fashion/static/media/jeans.e511ce368528ae5be390.jpg",
     "static/media/runway.jpg": "/w3c_fashion/static/media/runway.c1a68e22461412b02046.jpg",
@@ -13,10 +13,10 @@
     "static/media/avatar_smoke.jpg": "/w3c_fashion/static/media/avatar_smoke.32a6e2743fb3bb22644e.jpg",
     "index.html": "/w3c_fashion/index.html",
     "main.7e67ffb8.css.map": "/w3c_fashion/static/css/main.7e67ffb8.css.map",
-    "main.7fff6da3.js.map": "/w3c_fashion/static/js/main.7fff6da3.js.map"
+    "main.f041cb66.js.map": "/w3c_fashion/static/js/main.f041cb66.js.map"
   },
   "entrypoints": [
     "static/css/main.7e67ffb8.css",
-    "static/js/main.7fff6da3.js"
+    "static/js/main.f041cb66.js"
   ]
 }
