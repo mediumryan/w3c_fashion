@@ -23,7 +23,7 @@ const HeaderIcons = styled.div`
 
 export default function Header() {
   return (
-    <HeaderContainer>
+    <HeaderContainer id="header">
       <HeaderIcons>
         <FaFacebookSquare className="header_icons" />
         <FaInstagramSquare className="header_icons" />

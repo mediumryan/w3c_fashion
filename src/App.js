@@ -3,6 +3,7 @@ import HeaderTitle from "./components/HeaderTitle";
 import Greeting from "./components/Greeting";
 import "./css/index.css";
 import Post from "./components/Post";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <HeaderTitle />
       <Greeting />
       <Post />
+      <Footer />
     </div>
   );
 }
