@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/w3c_fashion/static/css/main.7e67ffb8.css",
+    "main.js": "/w3c_fashion/static/js/main.7fff6da3.js",
+    "static/media/jane.jpg": "/w3c_fashion/static/media/jane.8f229fa871be9b9fc5a6.jpg",
+    "static/media/jeans.jpg": "/w3c_fashion/static/media/jeans.e511ce368528ae5be390.jpg",
+    "static/media/runway.jpg": "/w3c_fashion/static/media/runway.c1a68e22461412b02046.jpg",
+    "static/media/man_hat.jpg": "/w3c_fashion/static/media/man_hat.35f7c174a56f6bb535ab.jpg",
+    "static/media/girl_hat.jpg": "/w3c_fashion/static/media/girl_hat.f2172b59c99a1382a1b4.jpg",
+    "static/media/team1.jpg": "/w3c_fashion/static/media/team1.a1d2f3730ad3b807a1cd.jpg",
+    "static/media/team4.jpg": "/w3c_fashion/static/media/team4.1a9a53d933eb5b8fe207.jpg",
+    "static/media/workshop.jpg": "/w3c_fashion/static/media/workshop.326b4fa2602a09804c3b.jpg",
+    "static/media/avatar_smoke.jpg": "/w3c_fashion/static/media/avatar_smoke.32a6e2743fb3bb22644e.jpg",
+    "index.html": "/w3c_fashion/index.html",
+    "main.7e67ffb8.css.map": "/w3c_fashion/static/css/main.7e67ffb8.css.map",
+    "main.7fff6da3.js.map": "/w3c_fashion/static/js/main.7fff6da3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e67ffb8.css",
+    "static/js/main.7fff6da3.js"
+  ]
+}
