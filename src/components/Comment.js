@@ -24,6 +24,10 @@ const CommentsImgContainer = styled.div`
   width: 100px;
   height: 100px;
   margin-right: 64px;
+  @media screen and (max-width: 600px) {
+    width: 64px;
+    height: 64px;
+  }
 `;
 
 const CommentsImg = styled.img`
@@ -32,6 +36,10 @@ const CommentsImg = styled.img`
   top: 0%;
   width: 100px;
   height: 100px;
+  @media screen and (max-width: 600px) {
+    width: 64px;
+    height: 64px;
+  }
 `;
 
 const CommentOtherContainer = styled.div`

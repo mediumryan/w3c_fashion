@@ -15,6 +15,9 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   background-color: black;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const HeaderIcons = styled.div`

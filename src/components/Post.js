@@ -13,7 +13,6 @@ import {
   FaFlickr,
   FaTwitter,
   FaLinkedinIn,
-  FaSearch,
 } from "react-icons/fa";
 
 const PostContainer = styled.section`
@@ -26,10 +25,12 @@ const PostContainer = styled.section`
     color: white;
     background-color: black;
   }
+  @media screen and (max-width: 993px) {
+    flex-direction: column;
+  }
 `;
 
 const PostContent = styled.div`
-  width: 70%;
   display: flex;
   flex-direction: column;
   padding: 12px;
@@ -39,7 +40,6 @@ const PostContent = styled.div`
 const SideContent = styled.aside`
   padding: 12px;
   margin: 12px;
-  width: 30%;
 `;
 
 const SideProfile = styled.div`
@@ -216,8 +216,8 @@ export default function Post() {
         </SideTags>
         <h5 className="post_title">Inspiration</h5>
         <SideInspiration>
-          {inspirationData.map((item) => {
-            return <InspirationImg src={item.image_path} />;
+          {inspirationData.map((item, index) => {
+            return <InspirationImg src={item.image_path} key={index} />;
           })}
         </SideInspiration>
         <h5 className="post_title">Follow Me</h5>
