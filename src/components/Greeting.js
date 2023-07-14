@@ -40,13 +40,22 @@ const GreetingContents = styled.div`
   }
 `;
 
-export default function Greeting() {
+export default function Greeting({ modalShow, setModalShow }) {
+  const handleModal = () => {
+    setModalShow(!modalShow);
+  };
   return (
     <GreetingContainer bg={BG}>
       <GreetingContents>
         <h4>Jane's</h4>
         <h2>FASHION BLOG</h2>
-        <button>subscribe</button>
+        <button
+          onClick={() => {
+            handleModal();
+          }}
+        >
+          subscribe
+        </button>
       </GreetingContents>
     </GreetingContainer>
   );

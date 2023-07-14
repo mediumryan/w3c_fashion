@@ -156,7 +156,7 @@ const SideSubscribe = styled.div`
   }
 `;
 
-export default function Post() {
+export default function Post({ modalShow, setModalShow }) {
   const [data] = useState(post_data);
   const [popularData] = useState(popular_data);
   const tags = [
@@ -176,6 +176,10 @@ export default function Post() {
     "Trends",
   ];
   const [inspirationData] = useState(inspiration_data);
+
+  const handleModal = () => {
+    setModalShow(!modalShow);
+  };
 
   return (
     <PostContainer>
@@ -235,7 +239,13 @@ export default function Post() {
             Enter your e-mail below and get notified on the latest blog posts.
           </p>
           <input placeholder="Enter e-mail" />
-          <button>Subscribe</button>
+          <button
+            onClick={() => {
+              handleModal();
+            }}
+          >
+            Subscribe
+          </button>
         </SideSubscribe>
       </SideContent>
     </PostContainer>
