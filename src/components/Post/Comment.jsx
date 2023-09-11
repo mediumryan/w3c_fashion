@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useRecoilValue } from 'recoil';
-import { comment } from '../data/atom';
+import { comment } from '../../data/atom';
 
 const CommentContainer = styled.div`
     padding: 36px 24px 0 24px;

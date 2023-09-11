@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaThumbsUp } from 'react-icons/fa';
-import Comment from '../Comment';
+import Comment from './Comment';
 import PostBtn from './PostBtn';
 
 const PostCardContainer = styled.div`

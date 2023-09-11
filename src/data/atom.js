@@ -129,3 +129,8 @@ export const post = atom({
         },
     ],
 });
+
+export const modalState = atom({
+    key: 'modal_state',
+    default: false,
+});
