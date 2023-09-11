@@ -2,23 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderTitleContainer = styled.section`
-    padding: 64px 0;
+    padding: var(--padding-very-large) 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    letter-spacing: -1px;
 
     h1 {
-        font-size: 48px;
-        margin-bottom: 32px;
+        font-size: var(--font-size-large);
+        margin-bottom: var(--margin-large);
+        letter-spacing: -2px;
     }
     p {
         span {
             background-color: black;
             color: white;
-            padding: 4px;
+            padding: var(--padding-micro);
         }
     }
 `;

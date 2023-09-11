@@ -8,12 +8,6 @@ const PostContainer = styled.section`
     width: 100%;
     background-color: #ddd;
     display: flex;
-    .post_title {
-        font-size: 20px;
-        padding: 24px 12px;
-        color: white;
-        background-color: black;
-    }
     @media screen and (max-width: 993px) {
         flex-direction: column;
     }
@@ -22,8 +16,8 @@ const PostContainer = styled.section`
 const PostContent = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 12px;
-    margin: 12px;
+    padding: var(--padding-medium);
+    margin: var(--margin-medium);
 `;
 
 export default function Post() {

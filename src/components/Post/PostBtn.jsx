@@ -6,30 +6,30 @@ const PostBtnContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     button {
-        font-size: 16px;
-        padding: 8px 12px;
+        font-size: var(--font-size-micro);
+        padding: var(--padding-double-small);
     }
     button:first-child {
-        border: 1px solid #ddd;
+        border: 1px solid var(--bg-200);
         span {
-            margin-left: 8px;
+            margin-left: var(--margin-small);
         }
         &:hover {
-            background-color: #ddd;
+            background-color: var(--bg-200);
         }
     }
     button:last-child {
-        background-color: black;
-        color: white;
+        background-color: var(--text-100);
+        color: var(--bg-100);
         span {
-            color: black;
-            background-color: white;
+            color: var(--text-100);
+            background-color: var(--bg-100);
             padding: 2px 4px;
             margin-left: 8px;
         }
         &:hover {
-            color: black;
-            background-color: #ddd;
+            color: var(--text-100);
+            background-color: var(--bg-200);
         }
     }
 `;

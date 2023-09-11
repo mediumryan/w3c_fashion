@@ -14,14 +14,16 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    @media screen and (max-width: 600px) {
+    background-color: var(--text-100);
+    padding: var(--padding-double-large);
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         display: none;
     }
 `;
 
 const HeaderIcons = styled.div`
     display: flex;
+    align-items: center;
 `;
 
 export default function Header() {

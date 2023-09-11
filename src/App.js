@@ -5,17 +5,23 @@ import './css/index.css';
 import Post from './components/Post/Post';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
+import { styled } from 'styled-components';
+
+const MainWrapper = styled.div`
+    position: relative;
+    font-family: var(--font-family-default);
+`;
 
 function App() {
     return (
-        <div className="App">
+        <MainWrapper>
             <Header />
             <HeaderTitle />
             <Modal />
             <Greeting />
             <Post />
             <Footer />
-        </div>
+        </MainWrapper>
     );
 }
 
