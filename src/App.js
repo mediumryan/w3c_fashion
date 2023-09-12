@@ -4,7 +4,7 @@ import Greeting from './components/Greeting';
 import './css/index.css';
 import Post from './components/Post/Post';
 import Footer from './components/Footer';
-import Modal from './components/Modal';
+import Modal from './components/Modal/Modal';
 import { styled } from 'styled-components';
 
 const MainWrapper = styled.div`

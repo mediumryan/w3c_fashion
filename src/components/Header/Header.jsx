@@ -16,6 +16,17 @@ const HeaderContainer = styled.header`
     align-items: center;
     background-color: var(--bg-100);
     padding: var(--padding-double-large);
+    svg {
+        color: var(--text-100);
+        font-size: var(--font-size-medium-large);
+        margin-right: var(--margin-small);
+        padding: var(--padding-small);
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            color: var(--primary-200);
+        }
+    }
     @media only screen and (min-width: 320px) and (max-width: 768px) {
         display: none;
     }

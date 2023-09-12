@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
 import { useRecoilState } from 'recoil';
-import { modalState } from '../data/atom';
+import { modalState } from '../../data/atom';
+import ModalForm from './ModalForm';
 
 const ModalContainer = styled.div`
     position: fixed;
@@ -10,15 +11,20 @@ const ModalContainer = styled.div`
     left: 50%;
     transform: translateX(-50%);
     padding: var(--padding-medium-large);
-    width: 80%;
+    width: 50%;
     display: ${(props) => (props.show ? 'flex' : 'none')};
     flex-direction: column;
-    background-color: white;
-    color: black;
+    background-color: var(--bg-300);
     border: 1px solid black;
     z-index: 999;
     * {
         margin-bottom: var(--margin-medium);
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 65%;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        width: 75%;
     }
 `;
 
@@ -27,27 +33,21 @@ const ModalTitle = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--margin-medium-large);
+    color: var(--primary-100);
     * {
         font-weight: 700;
         font-size: var(--font-size-medium);
     }
 `;
 
-const ModalForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    input {
-        padding: var(--padding-medium);
-    }
-    button {
-        background-color: tomato;
-        color: white;
-        padding: var(--padding-meidum) 0;
-        &:hover {
-            background-color: #ddd;
-            color: black;
-        }
-    }
+const ModalClose = styled.button`
+    color: var(--primary-100);
+`;
+
+const ModalDescription = styled.p`
+    margin-bottom: var(--margin-medium-large);
+    font-size: var(--font-size-small);
+    line-height: 1.5;
 `;
 
 export default function Modal() {
@@ -61,29 +61,19 @@ export default function Modal() {
         <ModalContainer show={modal}>
             <ModalTitle>
                 <h3>SUBSCRIBE</h3>
-                <button>
+                <ModalClose>
                     <FaTimes
                         onClick={() => {
                             handleModal();
                         }}
                     />
-                </button>
+                </ModalClose>
             </ModalTitle>
-            <div>
+            <ModalDescription>
                 Join my mailing list to receive updates on the latest blog posts
                 and other things.
-            </div>
-            <ModalForm>
-                <input placeholder="Enter e-mail" />
-                <button
-                    onClick={(e) => {
-                        e.preventDefault();
-                        handleModal();
-                    }}
-                >
-                    SUBSCRIBE
-                </button>
-            </ModalForm>
+            </ModalDescription>
+            <ModalForm />
         </ModalContainer>
     );
 }
