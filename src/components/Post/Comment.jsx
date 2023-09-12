@@ -9,7 +9,7 @@ const CommentContainer = styled.div`
     display: ${(props) => (props.show ? 'flex' : 'none')};
     flex-direction: column;
     width: 100%;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--primary-100);
 `;
 
 const Comments = styled.div`
@@ -35,34 +35,37 @@ const CommentsImg = styled.img`
     position: absolute;
     left: 0;
     top: 0%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 100%;
     @media screen and (max-width: 600px) {
         width: 64px;
-        height: 64px;
+        height: 100%;
     }
 `;
 
-const CommentOtherContainer = styled.div`
+const CommentContent = styled.div`
+    font-size: var(--font-size-micro);
     flex-basis: 90%;
     display: flex;
     flex-direction: column;
-    p:first-child {
-        font-weight: 600;
-        margin: 0 0 var(--margin-medium) 0;
-        span {
-            margin-left: var(--margin-small);
-            font-size: var(--font-size-micro);
-            font-weight: 400;
-            color: grey;
-        }
+`;
+
+const CommentName = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--margin-medium);
+    h5 {
+        margin-right: var(--margin-small);
+        font-size: var(--font-size-small);
     }
-    p:last-child {
+    span {
         font-size: var(--font-size-micro);
-        line-height: 1.5;
-        font-weight: 400;
-        margin: 0;
+        color: var(--primary-100);
     }
+`;
+
+const CommentComments = styled.p`
+    line-height: 1.5;
 `;
 
 export default function Comment({ showComment }) {
@@ -76,13 +79,13 @@ export default function Comment({ showComment }) {
                         <CommentsImgContainer>
                             <CommentsImg src={comment.avatar} />
                         </CommentsImgContainer>
-                        <CommentOtherContainer>
-                            <p>
-                                {comment.name}
+                        <CommentContent>
+                            <CommentName>
+                                <h5>{comment.name}</h5>
                                 <span>{comment.date}</span>
-                            </p>
-                            <p>{comment.content}</p>
-                        </CommentOtherContainer>
+                            </CommentName>
+                            <CommentComments>{comment.content}</CommentComments>
+                        </CommentContent>
                     </Comments>
                 );
             })}

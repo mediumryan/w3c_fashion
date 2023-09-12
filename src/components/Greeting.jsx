@@ -20,7 +20,7 @@ const GreetingContents = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
-    color: white;
+    color: var(--primary-300);
     h4 {
         font-size: var(--font-size-medium-large);
         font-weight: 500;
@@ -35,9 +35,10 @@ const GreetingContents = styled.div`
         text-transform: uppercase;
         padding: var(--padding-medium) var(--padding-medium-large);
         font-size: var(--font-size-medium);
-        background-color: rgba(220, 220, 220, 0.5);
+        background-color: var(--bg-200);
+        opacity: 0.5;
         &:hover {
-            background-color: rgb(220, 220, 220);
+            opacity: 1;
         }
     }
 `;

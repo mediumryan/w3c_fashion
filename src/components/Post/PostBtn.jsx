@@ -6,49 +6,36 @@ const PostBtnContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     margin-top: var(--margin-medium-large);
-    button {
-        font-size: var(--font-size-micro);
-        padding: var(--padding-double-small);
+`;
+
+const BtnBox = styled.button`
+    font-size: var(--font-size-micro);
+    padding: var(--padding-double-small);
+    background-color: var(--primary-100);
+    color: var(--primary-300);
+    transition: 500ms all;
+    span {
+        margin-left: var(--margin-small);
     }
-    button:first-child {
-        border: 1px solid var(--bg-200);
-        span {
-            margin-left: var(--margin-small);
-        }
-        &:hover {
-            background-color: var(--bg-200);
-        }
-    }
-    button:last-child {
-        background-color: var(--text-100);
-        color: var(--bg-100);
-        span {
-            color: var(--text-100);
-            background-color: var(--bg-100);
-            padding: var(--padding-double-micro);
-            margin-left: var(--margin-small);
-        }
-        &:hover {
-            color: var(--text-100);
-            background-color: var(--bg-200);
-        }
+    &:hover {
+        transform: scale(1.15);
     }
 `;
 
 export default function PostBtn({ setShowComment, item }) {
     return (
         <PostBtnContainer>
-            <button>
+            <BtnBox>
                 <FaThumbsUp />
                 <span>Like</span>
-            </button>
-            <button
+            </BtnBox>
+            <BtnBox
                 onClick={() => {
                     setShowComment((prev) => !prev);
                 }}
             >
                 Replies<span>{item.reply}</span>
-            </button>
+            </BtnBox>
         </PostBtnContainer>
     );
 }

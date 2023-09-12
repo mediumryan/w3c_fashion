@@ -10,6 +10,7 @@ import { styled } from 'styled-components';
 const MainWrapper = styled.div`
     position: relative;
     font-family: var(--font-family-default);
+    color: var(--text-100);
 `;
 
 function App() {

@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--text-100);
+    background-color: var(--bg-100);
     padding: var(--padding-double-large);
     @media only screen and (min-width: 320px) and (max-width: 768px) {
         display: none;

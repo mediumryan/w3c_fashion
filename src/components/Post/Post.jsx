@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import PostCard from './PostCard';
 import { useRecoilValue } from 'recoil';
 import { post } from '../../data/atom';
-import PostSideContent from './PostSideContent';
+import PostSideContent from './PostSide/PostSideContent';
 
 const PostContainer = styled.section`
     width: 100%;
-    background-color: #ddd;
+    background-color: var(--bg-300);
     display: flex;
-    @media screen and (max-width: 993px) {
+    @media screen and (max-width: 1024px) {
         flex-direction: column;
     }
 `;

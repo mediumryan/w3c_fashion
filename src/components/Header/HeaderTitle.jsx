@@ -16,8 +16,7 @@ const HeaderTitleContainer = styled.section`
     }
     p {
         span {
-            background-color: black;
-            color: white;
+            background-color: var(--bg-100);
             padding: var(--padding-micro);
         }
     }

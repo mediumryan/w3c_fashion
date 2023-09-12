@@ -54,6 +54,10 @@ export const inspiration = atom({
             image_path: team4,
             id: 3,
         },
+        {
+            image_path: jeans,
+            id: 4,
+        },
     ],
 });
 

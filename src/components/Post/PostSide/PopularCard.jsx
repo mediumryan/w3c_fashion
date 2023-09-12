@@ -6,9 +6,10 @@ const PopularCardContainer = styled.div`
     align-items: center;
     background-color: white;
     padding: var(--padding-medium);
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--primary-300);
+    cursor: pointer;
     &:hover {
-        background-color: grey;
+        background-color: var(--bg-200);
     }
 `;
 
@@ -25,8 +26,9 @@ const PopularContext = styled.div`
     p:first-child {
         font-weight: 700;
         margin-bottom: var(--margin-small);
+        color: var(--primary-200);
     }
-    p: last-child {
+    p:last-child {
         font-size: var(--font-size-micro);
     }
 `;
