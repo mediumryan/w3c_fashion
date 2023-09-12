@@ -5,22 +5,22 @@ import styled from 'styled-components';
 const FooterContainer = styled.footer`
     background-color: grey;
     color: white;
-    padding: 48px 24px;
+    padding: var(--padding-very-large) var(--padding-large);
     * {
-        font-size: 18px;
+        font-size: var(--font-size-micro);
     }
     button {
         display: flex;
         align-items: center;
         background-color: black;
-        padding: 12px;
-        margin-bottom: 24px;
+        padding: var(--padding-medium);
+        margin-bottom: var(--margin-medium-large);
         &:hover {
             color: black;
             background-color: #aaa;
         }
         span {
-            margin-left: 12px;
+            margin-left: var(--margin-medium);
         }
     }
 `;
@@ -30,7 +30,7 @@ export default function Footer() {
         <FooterContainer>
             <button>
                 <a
-                    href="#header"
+                    href="#header_title"
                     style={{ color: 'white', textDecoration: 'none' }}
                 >
                     <FaArrowUp /> <span>To the Top</span>

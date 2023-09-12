@@ -16,7 +16,7 @@ const HeaderContainer = styled.header`
     align-items: center;
     background-color: var(--text-100);
     padding: var(--padding-double-large);
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
         display: none;
     }
 `;

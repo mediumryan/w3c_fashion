@@ -9,7 +9,7 @@ const ModalContainer = styled.div`
     top: 72px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 24px;
+    padding: var(--padding-medium-large);
     width: 80%;
     display: ${(props) => (props.show ? 'flex' : 'none')};
     flex-direction: column;
@@ -18,7 +18,7 @@ const ModalContainer = styled.div`
     border: 1px solid black;
     z-index: 999;
     * {
-        margin-bottom: 16px;
+        margin-bottom: var(--margin-medium);
     }
 `;
 
@@ -26,10 +26,10 @@ const ModalTitle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: var(--margin-medium-large);
     * {
         font-weight: 700;
-        font-size: 24px;
+        font-size: var(--font-size-medium);
     }
 `;
 
@@ -37,12 +37,12 @@ const ModalForm = styled.form`
     display: flex;
     flex-direction: column;
     input {
-        padding: 12px;
+        padding: var(--padding-medium);
     }
     button {
         background-color: tomato;
         color: white;
-        padding: 16px 0;
+        padding: var(--padding-meidum) 0;
         &:hover {
             background-color: #ddd;
             color: black;

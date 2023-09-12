@@ -13,34 +13,41 @@ import {
 } from 'react-icons/fa';
 
 const SideContent = styled.aside`
-    padding: 12px;
-    margin: 12px;
+    padding: var(--padding-medium);
+    margin: var(--margin-medium);
+`;
+
+const SidePostTitle = styled.h5`
+    color: var(--accent-100);
+    margin: 0 0 var(--margin-small) var(--margin-small);
 `;
 
 const SideProfile = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: black;
-    color: white;
-    margin-bottom: 24px;
+    background-color: var(--text-100);
+    color: var(--bg-100);
+    margin-bottom: var(--margin-medium-large);
 `;
 
 const ProfileImg = styled.img`
     flex-basis: 70%;
     filter: grayscale(75%);
+    margin-bottom: var(--margin-medium);
 `;
 
 const ProfileContext = styled.div`
     flex-basis: 30%;
     p {
-        padding: 12px 12px 24px 12px;
+        padding: var(--padding-medium) var(--padding-medium)
+            var(--padding-medium-large) var(--padding-medium);
     }
 `;
 
 const SidePopular = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 24px;
+    margin-bottom: var(--margin-medium-large);
 `;
 
 const SideAdvertise = styled.div`
@@ -49,8 +56,8 @@ const SideAdvertise = styled.div`
     justify-content: center;
     align-items: center;
     height: 240px;
-    padding: 24px;
-    margin-bottom: 24px;
+    padding: var(--padding-medium-large);
+    margin-bottom: var(--margin-medium-large);
     div {
         width: 90%;
         height: 90%;
@@ -63,26 +70,25 @@ const SideAdvertise = styled.div`
 
 const SideTags = styled.div`
     background-color: white;
-    padding: 24px;
-    margin-bottom: 24px;
+    padding: var(--padding-medium-large);
+    margin-bottom: var(--margin-medium-large);
     display: flex;
     flex-wrap: wrap;
     span {
         background-color: #ddd;
-        padding: 4px 8px;
-        margin: 4px 8px;
+        padding: var(--padding-double-micro);
+        margin: var(--margin-micro) var(--margin-small);
     }
     span:first-child {
         background-color: black;
         color: white;
-        font-size: 18px;
     }
 `;
 
 const SideInspiration = styled.div`
     background-color: white;
-    padding: 24px 0;
-    margin-bottom: 24px;
+    padding: var(--padding-medium-large) 0;
+    margin-bottom: var(--margin-medium-large);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,17 +98,17 @@ const SideInspiration = styled.div`
 const InspirationImg = styled.img`
     width: 180px;
     height: 120px;
-    margin: 8px;
+    margin: var(--margin-small);
 `;
 
 const SideFollow = styled.div`
     background-color: white;
-    margin-bottom: 24px;
+    margin-bottom: var(--margin-medium-large);
     * {
         color: black;
-        font-size: 18px;
-        padding: 8px;
-        margin: 4px;
+        font-size: var(--font-size-medium-large);
+        padding: var(--padding-small);
+        margin: var(--margin-micro);
         &:hover {
             opacity: 0.5;
         }
@@ -110,20 +116,21 @@ const SideFollow = styled.div`
 `;
 
 const SideSubscribe = styled.div`
-    padding: 24px;
+    padding: var(--padding-medium-large);
     background-color: white;
     display: flex;
     flex-direction: column;
     input {
-        font-size: 18px;
-        margin: 24px 0;
-        padding: 8px 12px 8px 4px;
+        font-size: var(--font-size-small);
+        margin: var(--margin-medium-large) 0;
+        padding: var(--margin-small) var(--margin-medium) var(--margin-small)
+            var(--margin-micro);
     }
     button {
         background-color: tomato;
         color: white;
-        padding: 12px 0;
-        font-size: 18px;
+        padding: var(--padding-medium) 0;
+        font-size: var(--font-size-small);
         &:hover {
             color: black;
             background-color: #ddd;
@@ -161,7 +168,7 @@ export default function PostSideContent() {
         <SideContent>
             <SideProfile>
                 <ProfileImg src={profile_img} />
-                <h5 className="post_title">My Name</h5>
+                <SidePostTitle>Jane</SidePostTitle>
                 <ProfileContext>
                     <p>
                         Just me, myself and I, exploring the universe of
@@ -171,31 +178,31 @@ export default function PostSideContent() {
                     </p>
                 </ProfileContext>
             </SideProfile>
-            <h5 className="post_title">Popular Posts</h5>
+            <SidePostTitle>Popular Posts</SidePostTitle>
             <SidePopular>
                 {popularData.map((item) => {
                     return <PopularCard key={item.id} item={item} />;
                 })}
             </SidePopular>
-            <h5 className="post_title">Advertise</h5>
+            <SidePostTitle>Advertise</SidePostTitle>
             <SideAdvertise>
                 <div>
                     <p>Your AD Here</p>
                 </div>
             </SideAdvertise>
-            <h5 className="post_title">Tags</h5>
+            <SidePostTitle>Tags</SidePostTitle>
             <SideTags>
                 {tags.map((item, index) => {
                     return <span key={index}>{item}</span>;
                 })}
             </SideTags>
-            <h5 className="post_title">Inspiration</h5>
+            <SidePostTitle>Inspiration</SidePostTitle>
             <SideInspiration>
                 {inspirationData.map((item, index) => {
                     return <InspirationImg src={item.image_path} key={index} />;
                 })}
             </SideInspiration>
-            <h5 className="post_title">Follow Me</h5>
+            <SidePostTitle>Follow Me</SidePostTitle>
             <SideFollow>
                 <FaFacebookSquare />
                 <FaInstagramSquare />
@@ -204,7 +211,7 @@ export default function PostSideContent() {
                 <FaTwitter />
                 <FaLinkedinIn />
             </SideFollow>
-            <h5 className="post_title">Subscribe</h5>
+            <SidePostTitle>Subscribe</SidePostTitle>
             <SideSubscribe>
                 <p>
                     Enter your e-mail below and get notified on the latest blog

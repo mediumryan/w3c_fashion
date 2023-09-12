@@ -8,19 +8,19 @@ const PostCardContainer = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding: 24px 48px;
-    margin-bottom: 24px;
+    padding: var(--padding-double-large);
+    margin-bottom: var(--margin-medium-large);
 `;
 
 const PostTitle = styled.h2`
-    font-size: 28px;
-    font-weight: 500;
+    font-size: var(--font-size-medium);
+    font-weight: 700;
 `;
 
 const PostTitleDescription = styled.p`
-    font-size: 18px;
+    font-size: var(--font-size-small);
     font-weight: 500;
-    margin: 24px 0;
+    margin: var(--margin-medium-large) 0;
     letter-spacing: -1px;
     span {
         color: grey;
@@ -30,6 +30,7 @@ const PostTitleDescription = styled.p`
 const PostImgContainer = styled.div`
     position: relative;
     width: 100%;
+    margin-bottom: var(--margin-medium);
 `;
 
 const PostImg = styled.img`

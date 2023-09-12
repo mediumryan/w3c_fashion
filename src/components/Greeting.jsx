@@ -16,25 +16,25 @@ const GreetingContainer = styled.section`
 const GreetingContents = styled.div`
     position: absolute;
     top: 50%;
-    padding: 0 24px;
+    padding: 0 var(--padding-medium-large);
     display: flex;
     flex-direction: column;
     align-items: start;
     color: white;
     h4 {
-        font-size: 36px;
+        font-size: var(--font-size-medium-large);
         font-weight: 500;
-        margin-bottom: 24px;
+        margin-bottom: var(--margin-medium-large);
     }
     h2 {
-        font-size: 64px;
+        font-size: var(--font-size-huge);
         font-weight: 700;
-        margin-bottom: 24px;
+        margin-bottom: var(--margin-medium-large);
     }
     button {
         text-transform: uppercase;
-        padding: 12px 24px;
-        font-size: 24px;
+        padding: var(--padding-medium) var(--padding-medium-large);
+        font-size: var(--font-size-medium);
         background-color: rgba(220, 220, 220, 0.5);
         &:hover {
             background-color: rgb(220, 220, 220);

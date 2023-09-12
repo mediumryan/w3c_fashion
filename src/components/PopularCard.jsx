@@ -5,7 +5,7 @@ const PopularCardContainer = styled.div`
     display: flex;
     align-items: center;
     background-color: white;
-    padding: 12px;
+    padding: var(--padding-medium);
     border-bottom: 1px solid #ddd;
     &:hover {
         background-color: grey;
@@ -16,15 +16,18 @@ const PopularImg = styled.img`
     width: 54px;
     height: 54px;
     flex-grow: 10%;
-    margin-right: 24px;
+    margin-right: var(--margin-medium-large);
 `;
 
 const PopularContext = styled.div`
     flex-grow: 90%;
+    font-size: var(--font-size-small);
     p:first-child {
         font-weight: 700;
-        font-size: 18px;
-        margin-bottom: 8px;
+        margin-bottom: var(--margin-small);
+    }
+    p: last-child {
+        font-size: var(--font-size-micro);
     }
 `;
 

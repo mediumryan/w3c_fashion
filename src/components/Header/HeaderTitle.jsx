@@ -25,7 +25,7 @@ const HeaderTitleContainer = styled.section`
 
 export default function HeaderTitle() {
     return (
-        <HeaderTitleContainer>
+        <HeaderTitleContainer id="header_title">
             <h1>JANE BLOGLIFE</h1>
             <p>
                 Welcome to the blog of <span>Jane's world</span>

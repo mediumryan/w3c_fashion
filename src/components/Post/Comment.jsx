@@ -3,8 +3,9 @@ import { useRecoilValue } from 'recoil';
 import { comment } from '../../data/atom';
 
 const CommentContainer = styled.div`
-    padding: 36px 24px 0 24px;
-    margin: 24px 0 12px 0;
+    padding: var(--padding-large) var(--padding-medium-large) 0
+        var(--padding-medium-large);
+    margin: var(--margin-medium-large) 0 var(--margin-medium) 0;
     display: ${(props) => (props.show ? 'flex' : 'none')};
     flex-direction: column;
     width: 100%;
@@ -14,7 +15,7 @@ const CommentContainer = styled.div`
 const Comments = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: var(--margin-medium-large);
     width: 100%;
 `;
 
@@ -23,7 +24,7 @@ const CommentsImgContainer = styled.div`
     position: relative;
     width: 100px;
     height: 100px;
-    margin-right: 64px;
+    margin-right: calc(var(--margin-very-large) * 2);
     @media screen and (max-width: 600px) {
         width: 64px;
         height: 64px;
@@ -48,16 +49,17 @@ const CommentOtherContainer = styled.div`
     flex-direction: column;
     p:first-child {
         font-weight: 600;
-        margin: 0 0 12px 0;
+        margin: 0 0 var(--margin-medium) 0;
         span {
-            margin-left: 8px;
-            font-size: 16px;
+            margin-left: var(--margin-small);
+            font-size: var(--font-size-micro);
             font-weight: 400;
             color: grey;
         }
     }
     p:last-child {
-        font-size: 18px;
+        font-size: var(--font-size-micro);
+        line-height: 1.5;
         font-weight: 400;
         margin: 0;
     }
